@@ -1,0 +1,16 @@
+ALGORITHM algorithm_name
+VAR
+    T:= array_of INTEGER[n] //déclaration d'une tableau de type Entier 
+    i,j:= INTEGER     // déclaration des variables de type Entier
+    x:= INTEGER       // déclaration d'une variable temporelle "x" pour inserer des valeurs à partir de celui ci 
+BEGIN
+    FOR i FROM 2 TO n STEP  DO // toujours comparer en commençant par la deuxiéme élément des deux éléments à comparer du tableau
+        j <- i-1 x <- T[i] // donner la valeur de i à x
+        WHILE (j>=1 AND T[j]>T[i]) DO 
+            T[j+1]<- T[j]
+            j<- j-1
+        END_WHILE
+        // insérer x à la position j+1
+        T[j+1]<- x
+    END_FOR
+END
